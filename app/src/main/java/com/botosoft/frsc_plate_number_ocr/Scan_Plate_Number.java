@@ -104,7 +104,8 @@ public class Scan_Plate_Number extends AppCompatActivity {
 
                             }
 
-                            if(result.length() != 0 && Double.parseDouble(confidence) > 83){
+                            if(result.length() != 0 )
+                            {
                                 Intent in = new Intent(Scan_Plate_Number.this,Drivers_Details.class);
                                 in.putExtra("plateNumber",plateNumber);
 //                                in.putExtra("carColor",carColor);
@@ -113,23 +114,30 @@ public class Scan_Plate_Number extends AppCompatActivity {
 
                             }
                             else{
-                                new AlertDialog.Builder(Scan_Plate_Number.this)
-                                        .setTitle("Alert")
-                                        .setMessage("You need to take good and well positioned pictures to get good result \n please take pictures again")
+                                runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        new AlertDialog.Builder(Scan_Plate_Number.this)
+                                                .setTitle("Alert")
+                                                .setMessage("You need to take good and well positioned pictures to get good result \n please take pictures again")
 
-                                        // Specifying a listener allows you to take an action before dismissing the dialog.
-                                        // The dialog is automatically dismissed when a dialog button is clicked.
-                                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                                            public void onClick(DialogInterface dialog, int which) {
-                                                // Continue with delete operation
-                                            }
-                                        })
+                                                // Specifying a listener allows you to take an action before dismissing the dialog.
+                                                // The dialog is automatically dismissed when a dialog button is clicked.
+                                                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                                                    public void onClick(DialogInterface dialog, int which) {
+                                                        // Continue with delete operation
+                                                    }
+                                                })
 
-                                        // A null listener allows the button to dismiss the dialog and take no further action.
+                                                // A null listener allows the button to dismiss the dialog and take no further action.
 //                                        .setNegativeButton(android.R.string.no, null)
-                                        .setIcon(android.R.drawable.ic_dialog_alert)
-                                        .show();
-                                imgCapture.setImageBitmap(null);
+                                                .setIcon(android.R.drawable.ic_dialog_alert)
+                                                .show();
+
+                                    }
+                                });
+
+
 
                             }
 

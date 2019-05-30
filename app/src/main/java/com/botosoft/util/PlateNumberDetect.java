@@ -44,7 +44,7 @@ public class PlateNumberDetect {
 
             // Read image file to byte array
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-            photo.compress(Bitmap.CompressFormat.JPEG, 70, byteArrayOutputStream);     // Quality 0 = smallest, 100 = best quality
+            photo.compress(Bitmap.CompressFormat.JPEG, 60, byteArrayOutputStream);     // Quality 0 = smallest, 100 = best quality
             byte[] byteArray = byteArrayOutputStream.toByteArray();
 
             byte[] encoded = Base64.encode(byteArray, Base64.DEFAULT);
