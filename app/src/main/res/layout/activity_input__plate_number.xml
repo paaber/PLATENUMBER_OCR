@@ -25,12 +25,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.297" />
 
-    <ImageView
-        android:id="@+id/imageView4"
+    <EditText
+        android:id="@+id/inputplatenumberETInputPlateNumber"
         android:layout_width="288dp"
         android:layout_height="204dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -42,7 +40,7 @@
         app:srcCompat="@drawable/plate_number_form_field" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/submitButtonInputPlateNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

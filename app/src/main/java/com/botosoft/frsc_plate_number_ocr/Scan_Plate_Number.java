@@ -79,6 +79,7 @@ public class Scan_Plate_Number extends AppCompatActivity {
                 pgbar.setVisibility(View.VISIBLE);
 //                imgCapture.setVisibility(View.INVISIBLE);
                 new Thread(new Runnable() {
+
                     public void run() {
 //
                         sError = getPlateNumber.AnalyImage(bitmap);
@@ -92,6 +93,7 @@ public class Scan_Plate_Number extends AppCompatActivity {
                                 JSONObject obj = result.getJSONObject(i);
                                 plateNumber = obj.getString("plate");
                                 confidence  = obj.getString("confidence");
+
 //
 //                                JSONObject obj2 = obj.getJSONObject("vehicle");
 //                                JSONArray  obj2Arr = obj2.getJSONArray("color");
@@ -136,8 +138,6 @@ public class Scan_Plate_Number extends AppCompatActivity {
 
                                     }
                                 });
-
-
 
                             }
 
