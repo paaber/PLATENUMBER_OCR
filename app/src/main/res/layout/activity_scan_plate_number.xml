@@ -28,8 +28,8 @@
 
     <ImageView
         android:id="@+id/capturedImage"
-        android:layout_width="278dp"
-        android:layout_height="273dp"
+        android:layout_width="206dp"
+        android:layout_height="212dp"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
